@@ -1,0 +1,24 @@
+.footerContainer{
+    padding: 3rem 1rem;
+    background-color: #002147;
+    color:white;
+    margin-top: 2rem;
+}
+
+.footerTitle {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+.footerContainer h3{
+    margin-bottom: 2rem;
+    font-size:1.8rem;
+    font-weight: 700;
+}
+.footerContainer li {
+    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.footerContainer p{
+    font-size: 1.2rem;
+}
