@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Banner from './components/home/Banner'
 import UpdatedNews from './components/home/UpdatedNews'
 import Department from './components/home/Department'
+import Photo from './components/home/Photo'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
              <Banner/>
              <UpdatedNews/>
              <Department/>
+             <Photo/>
           </div>
           <div className='w-full md:w-[23%] bg-black text-white'> 
               <p>right side section</p>

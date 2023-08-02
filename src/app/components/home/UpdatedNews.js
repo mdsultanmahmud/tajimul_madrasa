@@ -67,9 +67,9 @@ const UpdatedNews = () => {
             
             {
                 news.map((n, index) =><SwiperSlide key={index}>
-                    <div>
-                        {n.icon}
-                        <p>{n.details}</p>
+                    <div className={`shadow-xl rounded-lg p-4`}>
+                        <span className='w-20 h-20 rounded-full bg-gray-500'>{n.icon}</span>
+                        <p className={`text-justify text-xl `}>{n.details}</p>
                     </div>
                 </SwiperSlide>)
             }
