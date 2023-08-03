@@ -13,46 +13,45 @@ import {IoIosInformationCircle} from 'react-icons/io'
 const UpdatedNews = () => {
     const news = [
         {
-            icon: <IoIosInformationCircle size={24}/>,
+            icon: <IoIosInformationCircle size={40} className='text-white'/>,
             details: "জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করেজীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে।"
         },
         {
-            icon: <IoIosInformationCircle size={24}/>,
+            icon: <IoIosInformationCircle size={40} className='text-white'/>,
             details: "জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করেজীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে।"
         },
         {
-            icon: <IoIosInformationCircle size={24}/>,
+            icon: <IoIosInformationCircle size={40} className='text-white'/>,
             details: "জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করেজীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে।"
         },
         {
-            icon: <IoIosInformationCircle size={24}/>,
+            icon: <IoIosInformationCircle size={40} className='text-white'/>,
             details: "জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করেজীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে।"
         },
         {
-            icon: <IoIosInformationCircle size={24}/>,
+            icon: <IoIosInformationCircle size={40} className='text-white'/>,
             details: "জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করেজীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে।"
         },
         {
-            icon: <IoIosInformationCircle size={24}/>,
+            icon: <IoIosInformationCircle size={40} className='text-white'/>,
             details: "জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করেজীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে।"
         },
         {
-            icon: <IoIosInformationCircle size={24}/>,
+            icon: <IoIosInformationCircle size={40} className='text-white'/>,
             details: "জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করেজীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে।"
         },
         {
-            icon: <IoIosInformationCircle size={24}/>,
+            icon: <IoIosInformationCircle size={40} className='text-white'/>,
             details: "জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করেজীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে।"
         }
     ]
     return (
-        <div className='my-8 md:my-12 lg:my-16'>
+        <div className='my-8 md:my-16 lg:my-20'>
             <div>
-                <h3>আপডেটেট নিউজ</h3>
+                <h3 className='text-center text-2xl md:text-3xl text-[#4CAF50] font-bold my-6 uppercase'>আপডেটেট নিউজ</h3>
             </div>
 
-          <Swiper
-            slidesPerView={3}
+            <Swiper
             spaceBetween={30}
             keyboard={{
               enabled: true,
@@ -63,13 +62,26 @@ const UpdatedNews = () => {
             navigation={true}
             modules={[Keyboard, Pagination, Navigation]}
             className="mySwiper"
+            autoplay = {true}
+            breakpoints={{
+              668: {
+                slidesPerView: 1
+              },
+              992: {
+                slidesPerView: 2
+              },
+              1400:{
+                slidesPerView: 3
+              }
+             
+            }}
           >
             
             {
                 news.map((n, index) =><SwiperSlide key={index}>
-                    <div className={`shadow-xl rounded-lg p-4`}>
-                        <span className='w-20 h-20 rounded-full bg-gray-500'>{n.icon}</span>
-                        <p className={`text-justify text-xl `}>{n.details}</p>
+                    <div className={`shadow-xl rounded-lg p-12  bg-red-500`}>
+                        <div className='mb-8 flex justify-center'> {n.icon}</div>
+                        <p className={`text-justify text-xl text-white`}>{n.details}</p>
                     </div>
                 </SwiperSlide>)
             }

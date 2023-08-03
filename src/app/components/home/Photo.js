@@ -75,8 +75,8 @@ const Photo = () => {
                             allPhotos = (photo.categories == active)
                         }
                         return allPhotos
-                    }).map((photo, index) => <div key={index}>
-                        <Image src={photo.img} alt='image of madrasa' width={300} height={300} className='rounded-lg h-full' />
+                    }).slice(0,9).map((photo, index) => <div key={index} className='overflow-hidden rounded-lg'>
+                        <Image src={photo.img} alt='image of madrasa' width={300} height={300} className='rounded-lg h-full transition duration-500 hover:scale-110' />
                     </div>)
                 }
             </div>

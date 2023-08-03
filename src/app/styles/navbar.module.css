@@ -1,0 +1,30 @@
+.upperNavCon{
+    display: grid;
+    place-items: center;
+    height: 25vh;
+    padding: 1rem 0rem;
+}
+.upperNavCon h1{
+    font-size: 1.8rem;
+    margin-bottom: 0.1rem;
+    font-weight: 700;
+}
+.upperNavCon h2, .upperNavCon h3{
+    font-size: 1.3rem;
+    margin-bottom: 0.1rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width:992px) {
+    .upperNavCon h1{
+        font-size: 1.5rem;
+    }
+    
+}
+
+/* @media screen and (max-width:767px) {
+    body{
+        background-color: red;
+    }
+    
+}  */
