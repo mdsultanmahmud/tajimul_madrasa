@@ -15,8 +15,8 @@ export default function Home() {
           <Department />
           <Photo />
         </div>
-        <div className='w-full lg:w-[23%] bg-white lg:bg-[#F7FFF7] text-white'>
-          <Sidebar/>
+        <div className='w-full lg:w-[23%] bg-white lg:bg-[#F7FFF7] text-white h-[100%] shadow-lg'>
+          <Sidebar />
         </div>
       </div>
     </div>
