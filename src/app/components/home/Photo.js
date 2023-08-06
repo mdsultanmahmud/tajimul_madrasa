@@ -58,12 +58,12 @@ const Photo = () => {
     ]
     return (
         <div>
-            <h3 className='text-center'>ছবি গ্যালারী</h3>
+            <h3 className='text-center text-2xl md:text-3xl text-[#4CAF50] font-bold my-6 uppercase textWhite'>ছবি গ্যালারী</h3>
             <div className='flex flex-wrap items-center justify-center gap-2 my-8'>
-                <button onClick={() => setActive("all")} className={`${active == "all" ? "bg-[#4CAF50]": "bg-black"} text-white font-semibold uppercase px-8 py-4 cursor-pointer`}>সকল ছবি</button>
-                <button onClick={() => setActive("campus")} className={`${active == "campus" ? "bg-[#4CAF50]": "bg-black"} text-white font-semibold uppercase px-8 py-4 cursor-pointer`}>ক্যাম্পাস</button>
-                <button onClick={() => setActive("student")} className={`${active == "student" ? "bg-[#4CAF50]": "bg-black"} text-white font-semibold uppercase px-8 py-4 cursor-pointer`}>ছাত্র ও শিক্ষক</button>
-                <button onClick={() => setActive("cerimony")} className={`${active == "cerimony" ? "bg-[#4CAF50]": "bg-black"} text-white font-semibold uppercase px-8 py-4 cursor-pointer`}>পুরুস্কার বিতরণী</button>
+                <button onClick={() => setActive("all")} className={`${active == "all" ? "bg-[#4CAF50]": "bg-black darkBg"} text-white font-semibold uppercase px-8 py-4 cursor-pointer`}>সকল ছবি</button>
+                <button onClick={() => setActive("campus")} className={`${active == "campus" ? "bg-[#4CAF50]": "bg-black darkBg"} text-white font-semibold uppercase px-8 py-4 cursor-pointer`}>ক্যাম্পাস</button>
+                <button onClick={() => setActive("student")} className={`${active == "student" ? "bg-[#4CAF50]": "bg-black darkBg"} text-white font-semibold uppercase px-8 py-4 cursor-pointer`}>ছাত্র ও শিক্ষক</button>
+                <button onClick={() => setActive("cerimony")} className={`${active == "cerimony" ? "bg-[#4CAF50]": "bg-black darkBg"} text-white font-semibold uppercase px-8 py-4 cursor-pointer`}>পুরুস্কার বিতরণী</button>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {

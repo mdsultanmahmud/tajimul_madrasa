@@ -14,14 +14,14 @@ const Sidebar = () => {
             {/* design teacher section  */}
             <div className='px-2 mb-12'>
                 <Image src={hujur} alt='hujur' width={300} height={300} className='mx-auto rounded-2xl mb-8' />
-                <h3 className='mb-3 border-b text-xl font-semibold text-[#4CAF50]'>নাম :</h3>
-                <h3 className='mb-3 border-b text-xl font-semibold text-[#4CAF50]'>পদবি :</h3>
-                <h3 className='mb-3 border-b text-xl font-semibold text-[#4CAF50]'>প্রতিষ্ঠান :</h3>
+                <h3 className='mb-3 border-b text-xl font-semibold text-[#4CAF50] textWhite'>নাম :</h3>
+                <h3 className='mb-3 border-b text-xl font-semibold text-[#4CAF50] textWhite'>পদবি :</h3>
+                <h3 className='mb-3 border-b text-xl font-semibold text-[#4CAF50] textWhite'>প্রতিষ্ঠান :</h3>
             </div>
 
             {/* notice section  */}
             <div className='mb-12'>
-                <h1 className='text-xl md:text-2xl mb-1 font-bold text-black '>গুরুত্বপূর্ণ নোটিস সমূহ</h1>
+                <h1 className='text-xl md:text-2xl mb-1 font-bold text-black textWhite'>গুরুত্বপূর্ণ নোটিস সমূহ</h1>
                 <hr className='mb-4' />
                     {
                         notices.map((notice) => <div key={notice.id} className='mb-2 bg-[#4CAF50] px-8 py-4 rounded-lg'>

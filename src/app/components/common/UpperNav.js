@@ -3,7 +3,7 @@ import styles from '../../styles/navbar.module.css'
 const UpperNav = () => {
     return (
         <div className='container'>
-            <div className={`${styles.upperNavCon}`}>
+            <div className={`${styles.upperNavCon} darkBgUpperNav  textWhite`}>
                 <div className='text-center'>
                     <h1 className={`text-[#4CAF50]`}>তাযীমুল উম্মাহ হিফয ইনস্টিটিউট</h1>
                     <h1>TAJIMUL UMMAH HIFAZ INSTITUTE</h1>

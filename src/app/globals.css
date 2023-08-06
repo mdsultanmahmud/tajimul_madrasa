@@ -9,9 +9,34 @@
 }
 body{
   padding: 0 0.5rem;
+  background-color: white;
 }
 
 .container{
   max-width: 1400px;
   margin: 0 auto;
 }
+
+[data-theme="dark"] body{
+  background-color:#121212;
+}
+
+/* dark mood  */
+
+/* common  */
+[data-theme="dark"] .textWhite{
+  color: white;
+}
+[data-theme="dark"] .darkBg{
+  background-color: #0E2954;
+}
+
+/* upper nav section  */
+[data-theme="dark"] .darkBgUpperNav{
+  background-color: #0E2954;
+}
+
+[data-theme="dark"] .darkTextUpperNav{
+  color: white;
+}
+

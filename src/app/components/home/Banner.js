@@ -28,7 +28,7 @@ const Banner = () => {
         loop={true}
       >
         {slider.map((img, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className='mb-12'>
             <Image className="rounded-lg" src={img} alt="slider of the banner" height={500} width={1000} />
           </SwiperSlide>
         ))}

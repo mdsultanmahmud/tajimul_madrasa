@@ -13,30 +13,30 @@ import { BiBookOpen } from 'react-icons/bi'
 const Department = () => {
   const news = [
     {
-      icon: <BiBookOpen size={40} className='text-white' />,
-      details: "জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করেজীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে।"
+      icon: <BiBookOpen size={40} className='text-black' />,
+      details: "আল হাদিস অ্যান্ড ইসলামিক স্টাডিজ বিভাগ"
     },
     {
-      icon: <BiBookOpen size={40} className='text-white' />,
-      details: "জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করেজীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে।"
+      icon: <BiBookOpen size={40} className='text-black' />,
+      details: "আল হাদিস অ্যান্ড ইসলামিক স্টাডিজ বিভাগ"
     },
     {
-      icon: <BiBookOpen size={40} className='text-white' />,
-      details: "জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করেজীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে।"
+      icon: <BiBookOpen size={40} className='text-black' />,
+      details: "আল হাদিস অ্যান্ড ইসলামিক স্টাডিজ বিভাগ"
     },
     {
-      icon: <BiBookOpen size={40} className='text-white' />,
-      details: "জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করেজীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে।"
+      icon: <BiBookOpen size={40} className='text-black' />,
+      details: "আল হাদিস অ্যান্ড ইসলামিক স্টাডিজ বিভাগ"
     },
     {
-      icon: <BiBookOpen size={40} className='text-white' />,
-      details: "জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করেজীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে।"
+      icon: <BiBookOpen size={40} className='text-black' />,
+      details: "আল হাদিস অ্যান্ড ইসলামিক স্টাডিজ বিভাগ"
     }
   ]
   return (
     <div className='my-8 md:my-16 lg:my-20'>
       <div>
-        <h3 className='text-center text-2xl md:text-3xl text-[#4CAF50] font-bold my-6 uppercase'>আমাদের বিভাগ সমূহ</h3>
+        <h3 className='text-center text-2xl md:text-3xl text-[#4CAF50] font-bold my-6 uppercase textWhite'>আমাদের বিভাগ সমূহ</h3>
       </div>
       <Swiper
         spaceBetween={30}
@@ -51,10 +51,10 @@ const Department = () => {
         className="mySwiper"
         autoplay={true}
         breakpoints={{
-          668: {
+          500: {
             slidesPerView: 1
           },
-          992: {
+          668: {
             slidesPerView: 2
           },
           1400: {
@@ -65,10 +65,14 @@ const Department = () => {
       >
 
         {
-          news.map((n, index) => <SwiperSlide key={index}>
-            <div className={`shadow-xl rounded-lg p-12  bg-red-500`}>
-              <div className='mb-8 flex justify-center'> {n.icon}</div>
-              <p className={`text-justify text-xl text-white`}>{n.details}</p>
+          news.map((n, index) => <SwiperSlide key={index} className='my-8 shadow-2xl rounded-lg  bg-white textWhite darkBg'>
+            <div className={`mx-12`}>
+              <div className='mb-8 text-center bg-[#B6FDB9] p-8 rounded-t-lg'>
+                <span className='mb-4 flex justify-center'> {n.icon}</span>
+                <p className={`text-center text-xl text-black font-semibold`}>{n.details}</p>
+              </div>
+              <button className='block w-full font-bold mx-auto mb-2 bg-[#B6FDB9] py-2 text-black'>নোটিশ</button>
+              <button className='block w-full font-bold mx-auto mb-4 bg-[#B6FDB9] py-2 text-black'>see all</button>
             </div>
           </SwiperSlide>)
         }
