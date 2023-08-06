@@ -1,45 +1,71 @@
-import React from 'react';
-
+"use client"
+import { FaBars } from 'react-icons/fa'
+import { MdOutlineArrowDropDown } from 'react-icons/md'
+import { ImCross } from 'react-icons/im'
+import { useContext, useEffect, useState } from 'react';
+import styles from '../../styles/navbar.module.css'
+import { BsLinkedin } from 'react-icons/bs';
+import { CiFacebook } from 'react-icons/ci';
+import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
+import Link from 'next/link';
 const LowerNav = () => {
+    const [shownav, setShowNav] = useState(false)
+    const [showNested, setShowNested] = useState(false)
+    const [mdNav, setMdNav] = useState(false)   
+    const menuList = <>
+        <li><Link onClick={() => setMdNav(false)} href={'/'}>Home</Link></li>
+        <li><Link onClick={() => setMdNav(false)} href={'/notice'}>Notice</Link></li>
+        {/* <li>
+            <div className='flex gap-x-1 items-center'>
+                <Link onClick={() => setMdNav(false)} href={'/notice'}>Notice</Link>
+                <MdOutlineArrowDropDown onClick={() => {
+                    if (showNested == 'about') {
+                        setShowNested(false)
+                    } else {
+                        setShowNested('about')
+                    }
+                }} size={30} className="icon" />
+            </div>
+            <ul className={`${showNested === 'about' ? 'activeNested' : ''}`}>
+                <li><Link onClick={() => setMdNav(false)} href={'/company-profile'}>Company Profile</Link></li>
+                <li><Link onClick={() => setMdNav(false)} href={'/management-message'}>Managing Director&apos;s Message</Link></li>
+                <li><Link onClick={() => setMdNav(false)} href={'/certificate'}>Certificates</Link></li>
+                <li><Link onClick={() => setMdNav(false)} href={'/faq'}>FAQ</Link></li>
+                <li><Link onClick={() => setMdNav(false)} href={'/video'}>Video</Link></li>
+            </ul>
+        </li> */}
+        <li><Link onClick={() => setMdNav(false)} href={'/course'}>Course</Link></li>
+        <li><Link onClick={() => setMdNav(false)} href={"/result"}>Result</Link></li>
+        <li><Link onClick={() => setMdNav(false)} href={"/about"}>About Us</Link></li>
+        <li><Link onClick={() => setMdNav(false)} href={"/contact"}>Contact Us</Link></li>
+        <li><Link onClick={() => setMdNav(false)} href={"/management"}>Management</Link></li>
+    </>
     return (
-        <div className="navbar bg-transparent container z-10 text-white font-bold uppercase">
-            <div className="navbar-start">
-                <div className="dropdown">
-                    <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                    </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-black rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+        <div className={`w-full z-10`}>
+            <header className='container'>
+                <nav className={`${styles.customNav}`}>
+                    <div>
+                        <Link onClick={() => setMdNav(false)} href={'/'}>Logo</Link>
+                    </div>
+                    <div className='hidden lg:block'>
+                        <ul>
+                            {menuList}
+                        </ul>
+                    </div>
+                    <div className='flex items-center gap-x-4'>
+                        <Link className='primaryButton  rounded-xl md:rounded-2xl' href={'/login'}>Login</Link>
+                        <Link className='primaryButton  rounded-xl md:rounded-2xl' href={'/register'}>Register</Link>
+                        {!mdNav && <FaBars onClick={() => setMdNav(true)} size={24} className='lg:hidden cursor-pointer' />}
+                        {mdNav && <ImCross onClick={() => setMdNav(false)} size={24} className='lg:hidden cursor-pointer' />}
+
+                    </div>
+                </nav>
+                <div className={`lg:hidden ${styles.responsiveNav} ${mdNav ? styles.activeNavbar : ''} `}>
+                    <ul>
+                        {menuList}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
-            </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li tabIndex={0}>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul className="p-2 bg-black text-white z-10">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li><a>Item 3</a></li>
-                </ul>
-            </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
-            </div>
+            </header>
         </div>
     );
 };

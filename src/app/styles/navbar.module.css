@@ -1,7 +1,7 @@
 .upperNavCon{
     display: grid;
     place-items: center;
-    height: 25vh;
+    min-height: 25vh;
     padding: 1rem 0rem;
 }
 .upperNavCon h1{
@@ -28,3 +28,95 @@
     }
     
 }  */
+
+
+/* main navbar section starts here  */
+
+.customNav {
+    height: 75px;
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 50;
+    color: white;
+    padding: 0 1rem;
+}
+
+.customNav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customNav ul li {
+    padding: 0 0.5rem;
+    position: relative;
+}
+
+.customNav ul li ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #4CAF50;
+    z-index: 9;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0.5rem 1rem;
+    width: 280px;
+    display: none;
+}
+
+.customNav ul li ul li {
+    padding: 0.5rem 0rem;
+    transition: all ease-in 0.1s;
+}
+
+.customNav ul li ul li:hover {
+    margin-left: 0.3rem;
+}
+
+.customNav a,
+.responsiveNav a {
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    transition: all ease-in 0.1s;
+}
+
+.customNav a:hover {
+    color: red;
+}
+
+.customNav ul li:hover>ul {
+    display: block;
+}
+
+.responsiveNav {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all ease-in-out 0.2s;
+}
+
+.activeNavbar {
+    max-height: 1000px;
+}
+
+.responsiveNav ul li {
+    padding: 0.5rem;
+}
+
+.responsiveNav ul li ul {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: all ease-in-out 0.2s;
+    margin-left: 1rem;
+}
+
+.activeNested {
+    max-height: 500px !important;
+}
